@@ -1,4 +1,8 @@
 Iconsult::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/help"
+
   resources :work_activities
 
   resources :projects
