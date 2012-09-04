@@ -1,0 +1,35 @@
+<h1>Listing consultants</h1>
+
+<table>
+  <tr>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zipcode</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @consultants.each do |consultant| %>
+  <tr>
+    <td><%= consultant.last_name %></td>
+    <td><%= consultant.first_name %></td>
+    <td><%= consultant.street %></td>
+    <td><%= consultant.city %></td>
+    <td><%= consultant.state %></td>
+    <td><%= consultant.zipcode %></td>
+    <td><%= consultant.image %></td>
+    <td><%= link_to 'Show', consultant %></td>
+    <td><%= link_to 'Edit', edit_consultant_path(consultant) %></td>
+    <td><%= link_to 'Destroy', consultant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Consultant', new_consultant_path %>

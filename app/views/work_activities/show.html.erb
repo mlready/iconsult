@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Start date:</b>
+  <%= @work_activity.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @work_activity.end_date %>
+</p>
+
+<p>
+  <b>Total hours:</b>
+  <%= @work_activity.total_hours %>
+</p>
+
+<p>
+  <b>Contract:</b>
+  <%= @work_activity.contract_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_activity_path(@work_activity) %> |
+<%= link_to 'Back', work_activities_path %>

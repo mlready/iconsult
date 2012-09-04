@@ -1,0 +1,29 @@
+<h1>Listing work_activities</h1>
+
+<table>
+  <tr>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Total hours</th>
+    <th>Contract</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @work_activities.each do |work_activity| %>
+  <tr>
+    <td><%= work_activity.start_date %></td>
+    <td><%= work_activity.end_date %></td>
+    <td><%= work_activity.total_hours %></td>
+    <td><%= work_activity.contract_id %></td>
+    <td><%= link_to 'Show', work_activity %></td>
+    <td><%= link_to 'Edit', edit_work_activity_path(work_activity) %></td>
+    <td><%= link_to 'Destroy', work_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Work activity', new_work_activity_path %>

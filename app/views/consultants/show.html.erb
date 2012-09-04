@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Last name:</b>
+  <%= @consultant.last_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @consultant.first_name %>
+</p>
+
+<p>
+  <b>Street:</b>
+  <%= @consultant.street %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @consultant.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @consultant.state %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @consultant.zipcode %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @consultant.image %>
+</p>
+
+
+<%= link_to 'Edit', edit_consultant_path(@consultant) %> |
+<%= link_to 'Back', consultants_path %>

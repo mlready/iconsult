@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+	<title>iConsult</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
+	<meta name="author" content="Jenna Smith" />
+	<meta name="copyright"	content="Copyright 2006 growldesign" />	
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<%= stylesheet_link_tag "bc-stylesheet.css", :media => "screen, tv, projection" %>
+    
+    </head>
+
+<body>
+<div id="container">
+	
+       <%= render :partial => "shared/header" %>
+    
+	
+    <div id="content">
+		<%= @content_for_layout %>
+        
+        <%= render :partial => "shared/left_menu" %>
+       
+	</div>
+</div>
+    <%= render :partial => "shared/footer" %>
+</body>
+</html>
+

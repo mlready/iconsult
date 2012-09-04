@@ -1,4 +1,16 @@
 Iconsult::Application.routes.draw do
+  resources :work_activities
+
+  resources :projects
+
+  resources :contracts
+
+  resources :consultants
+
+  resources :clients
+
+  resources :agencies
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
