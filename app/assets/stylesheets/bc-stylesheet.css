@@ -9,97 +9,87 @@ body {
 	font-size: 76%;
 	color: #888;
 	height: 100%;
-	background: #fff url(/assets/images/bg.jpg) repeat-x;
+	background: #fff url(/assets/bg.jpg) repeat-x;
 	}
 a { text-decoration: none; color: #11A0CF; font-size: 1em; padding: 1px 2px; }
 a:hover { background-color: #f4f4f4; }
 acronym { border-bottom: 1px dotted #cc0000; cursor: help; }
 
-/*------------------------------------------------------------*
-**  Container
-**------------------------------------------------------------*/	
-#container {
-	height: auto !important;
-	height: 100%;
-	min-height: 100%;
-	position: relative;
-	text-align: center;
-	}	
 	
 /*------------------------------------------------------------*
 **  Header
 **------------------------------------------------------------*/	
-#header { 
-	background: url(/assets/images/header_top.gif) no-repeat 100% 5px; 
+.header { 
+	background: url(/assets/header_top.gif) no-repeat 100% 5px; 
 	width: 750px; 
 	margin: 0 auto;	
 	padding: 0;
 	}
-#header div { 
-	background: url(/assets/images/header_botm.jpg) no-repeat 0px 70px; 
+.header div { 
+	background: url(/assets/header_botm.jpg) no-repeat 0px 70px; 
 	text-align: left;
-	padding: 45px 0 97px 20px;	
+	padding: 45px 0 150px 20px;	
 	}	
-#header h1 {
+.header h1 {
 	margin: 0; 
 	clear: both;
 	padding: 43px 0 0 40px;	
 	font-size: 4em;	
 	}
-#header h1 a { 
+.header h1 a { 
 	padding: 0;
 	color: #000;
 	font-family: Century Gothic, sans-serif;
 	font-weight: normal;
 	color: #000;	
 	}	
-#header h1 a:hover { background-color: transparent; }	
-* html #header h1 { padding-top: 23px; }	
+.header h1 a:hover { background-color: transparent; }	
+*html .header h1 { padding-top: 23px; }	
 
 /*------------------------------------------------------------*
 **  Navigation
 **------------------------------------------------------------*/
-#header ul {
+.header ul {
 	margin: 0 40px;
 	padding: 0;	
 	}
-#header li { 
+.header li { 
 	display: inline;
 	list-style-type: none;
 	margin: 0 5px;
 	font-size: 1.0em;
-	background: url(/assets/images/nav.gif) no-repeat;
+	background: url(/assets/nav.gif) no-repeat;
 	width: 65px;
 	height: 25px;
 	float: left;
 	text-align: center;
 	}	
-#header li a { 
+.header li a { 
 	display: block; 
 	width: 100%;
 	color: #fff;
 	padding-top: 7px;
 	}		
-#header li a.on,
-#header li a:hover { background-color: #333; color: #9c0; height: 20px; }
+.header li a.on,
+.header li a:hover { background-color: #333; color: #9c0; height: 20px; }
 
 /*------------------------------------------------------------*
 **  Content
 **------------------------------------------------------------*/
-#content {
+.content {
 	width: 700px;
 	margin: 0 auto;
 	padding-bottom: 50px;
 	}
 * html #content { padding-bottom: 60px; }	
-#content:after {
+.content:after {
 	content: "."; 
 	display: block; 
 	clear: both; 
 	height: 0;
 	visibility: hidden
 	}	
-#content h2 { 
+.content h2 { 
 	font-size: 20px;
 	color: #333;
 	font-weight: normal;
@@ -107,83 +97,81 @@ acronym { border-bottom: 1px dotted #cc0000; cursor: help; }
 	margin: 0 0 20px 0;
 	clear: both;
 	}	
-#content h2 em { 
-	color: #09C; 
+.content h2 em { 
+	color: #000; 
 	font-style: normal;
 	}
-#content p {
+.content p {
 	text-indent: 3em;
 	line-height: 2.5em;
 	letter-spacing: 0.1em;	
 	}	
 	
-#content ul {
+.content ul {
 	margin: 20px 0;
 	padding: 0 0 0 10px;
 	}	
-#content li {
+.content li {
 	list-style-type: none;
-	background: url(/assets/images/bullet.gif) no-repeat 0px 8px;
+	background: url(/assets/bullet.gif) no-repeat 0px 8px;
 	padding: 0 0 0 25px;
 	line-height: 2em;
 	letter-spacing: 0.1em;	
 	}	
-#content blockquote { 
+.content blockquote { 
 	background-color: #FFFFF0; 
 	margin: 20px 0; 
 	padding: 10px 20px;
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	}
-#content blockquote p { margin: 0; text-indent: 0; }
+.content blockquote p { margin: 0; text-indent: 0; }
 
 /*------------------------------------------------------------*
 **  Thumbnails
 **------------------------------------------------------------*/
-#content ul.thumbs { 
+.content ul.thumbs { 
 	margin: 20px 0;
 	padding: 0;
 	}
-#content ul.thumbs:after {
+.content ul.thumbs:after {
 	content: "."; 
 	display: block; 
 	clear: both; 
 	height: 0;
 	visibility: hidden
 	}	
-#content ul.thumbs li { 
+.content ul.thumbs li { 
 	float: left;
 	margin: 3px;
 	padding: 0;
 	background-image: none;
 	}
-#content ul.thumbs li a img { border: 5px solid #ddd; }
-#content ul.thumbs li a:hover img { border: 5px solid #333; }	
-html>body #content ul.thumbs li a { background-color: transparent; }
+.content ul.thumbs li a img { border: 5px solid #ddd; }
+.content ul.thumbs li a:hover img { border: 5px solid #333; }	
+html>body .content ul.thumbs li a { background-color: transparent; }
 	
 /*------------------------------------------------------------*
 **  left
 **------------------------------------------------------------*/
-#left {
+.left {
 	float: left;
-	width: 225px;
 	text-align: left;
-	margin-right: 35px;
 	}
 
 /*------------------------------------------------------------*
 **  right
 **------------------------------------------------------------*/
-#right {
+.right {
 	float: right;
-	width: 438px;	
-	text-align: left;	
+	width: 500px;	
+	text-align: left;
 	}
 		
 /*------------------------------------------------------------*
 **  Footer
 **------------------------------------------------------------*/		
-#footer {	
+.footer {	
 	position: absolute !important;
 	width: 100% !important;
 	z-index: 500 !important;
@@ -195,5 +183,5 @@ html>body #content ul.thumbs li a { background-color: transparent; }
 	font-size: 11px;
 	border-top: 3px solid #ccc;
 	}	
-#footer p { margin: 0 10px; text-align: center; }	
-#footer a:hover { background-color: #222; }
+.footer p { margin: 0 10px; text-align: center; }	
+.footer a:hover { background-color: #222; }
