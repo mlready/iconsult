@@ -369,8 +369,6 @@ Object.extend(Object.extend(Ajax.Autocompleter.prototype, Autocompleter.Base.pro
 //                   how many characters are required to do any match
 //                   at all). Defaults to 2.
 //
-// - ignoreCase - Whether to ignore case when autocompleting.
-//                 Defaults to true.
 //
 // It's possible to pass in a custom function as the 'selector' 
 // option, if you prefer to write your own autocompletion logic.
@@ -492,7 +490,6 @@ Ajax.InPlaceEditor.prototype = {
     if(!this.options.formId && this.element.id) {
       this.options.formId = this.element.id + "-inplaceeditor";
       if ($(this.options.formId)) {
-        // there's already a form with that name, don't specify an id
         this.options.formId = null;
       }
     }
