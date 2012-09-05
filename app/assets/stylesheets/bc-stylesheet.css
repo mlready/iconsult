@@ -9,7 +9,7 @@ body {
 	font-size: 76%;
 	color: #888;
 	height: 100%;
-	background: #fff url(/images/bg.jpg) repeat-x;
+	background: #fff url(/assets/images/bg.jpg) repeat-x;
 	}
 a { text-decoration: none; color: #11A0CF; font-size: 1em; padding: 1px 2px; }
 a:hover { background-color: #f4f4f4; }
@@ -30,13 +30,13 @@ acronym { border-bottom: 1px dotted #cc0000; cursor: help; }
 **  Header
 **------------------------------------------------------------*/	
 #header { 
-	background: url(/images/header_top.gif) no-repeat 100% 5px; 
+	background: url(/assets/images/header_top.gif) no-repeat 100% 5px; 
 	width: 750px; 
 	margin: 0 auto;	
 	padding: 0;
 	}
 #header div { 
-	background: url(/images/header_botm.jpg) no-repeat 0px 70px; 
+	background: url(/assets/images/header_botm.jpg) no-repeat 0px 70px; 
 	text-align: left;
 	padding: 45px 0 97px 20px;	
 	}	
@@ -68,7 +68,7 @@ acronym { border-bottom: 1px dotted #cc0000; cursor: help; }
 	list-style-type: none;
 	margin: 0 5px;
 	font-size: 1.0em;
-	background: url(/images/nav.gif) no-repeat;
+	background: url(/assets/images/nav.gif) no-repeat;
 	width: 65px;
 	height: 25px;
 	float: left;
@@ -123,7 +123,7 @@ acronym { border-bottom: 1px dotted #cc0000; cursor: help; }
 	}	
 #content li {
 	list-style-type: none;
-	background: url(/images/bullet.gif) no-repeat 0px 8px;
+	background: url(/assets/images/bullet.gif) no-repeat 0px 8px;
 	padding: 0 0 0 25px;
 	line-height: 2em;
 	letter-spacing: 0.1em;	

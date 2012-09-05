@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
-<head>
-	<title>iConsult</title>
-	<%= stylesheet_link_tag "bc-stylesheet.css", :media => "all" %>
-	<%= javascript_include_tag "application" %>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    
-    </head>
+    <%= render 'shared/shim' %>
+  </head>
+  <body>
+    <%= render 'shared/header' %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, :class => "alert alert-#{key}") %>
+      <% end %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
 
-<body>
-<div id="container">
-	
-       <%= render :partial => "shared/header" %>
-    
-	
-    <div id="content">
-		<%= @content_for_layout %>
-        
-        <%= render :partial => "shared/left_menu" %>
-       
-	</div>
-</div>
-    <%= render :partial => "shared/footer" %>
-</body>
+  </body>
 </html>
-
-
