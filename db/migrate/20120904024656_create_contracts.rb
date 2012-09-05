@@ -1,9 +1,9 @@
 class CreateContracts < ActiveRecord::Migration
   def change
     create_table :contracts do |t|
-      t.integer :agency_id
-      t.integer :client_id
-      t.integer :consultant_id
+      t.references :agency, :index => true
+      t.references :client, :index => true 
+      t.references :consultant, :index => true 
       t.string :name
       t.date :start_date
       t.date :end_date
@@ -11,11 +11,5 @@ class CreateContracts < ActiveRecord::Migration
 
       t.timestamps
     end
-
-    foreign_key(:contracts, :agency_id, :agencies)
-    foreign_key(:contracts, :client_id, :clients)
-    foreign_key(:contracts, :consultant_id, :consultants)
-      
-    
   end
 end
