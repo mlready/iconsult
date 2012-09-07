@@ -11,25 +11,14 @@ class ConsultantsController < ApplicationController
   end
 
   # GET /consultants/1
-  # GET /consultants/1.json
   def show
     @consultant = Consultant.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @consultant }
-    end
   end
 
   # GET /consultants/new
   # GET /consultants/new.json
   def new
     @consultant = Consultant.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @consultant }
-    end
   end
 
   # GET /consultants/1/edit
@@ -42,15 +31,14 @@ class ConsultantsController < ApplicationController
   def create
     @consultant = Consultant.new(params[:consultant])
 
-    respond_to do |format|
-      if @consultant.save
-        format.html { redirect_to @consultant, notice: 'Consultant was successfully created.' }
-        format.json { render json: @consultant, status: :created, location: @consultant }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @consultant.errors, status: :unprocessable_entity }
-      end
+    if @consultant.save
+      sign_in @consultant
+      flash[:success] = "Welcome to IConsult!"
+      redirect_to @consultant
+    else
+      render 'new'
     end
+     
   end
 
   # PUT /consultants/1

@@ -3,9 +3,7 @@ Iconsult::Application.routes.draw do
   
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
-  
-  get "consultants/new"
+  match '/contact', to: 'static_pages#contact'  
   match '/signup',  to: 'consultants#new'
 
   resources :work_activities
@@ -19,6 +17,8 @@ Iconsult::Application.routes.draw do
   resources :clients
 
   resources :agencies
+  
+  resources :sessions, only: [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
