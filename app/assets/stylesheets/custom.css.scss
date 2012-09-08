@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border_box;
+  box-sizing: border-box;
+}
+
 #error_explanation {
   color: #f00;
   ul {
@@ -13,4 +19,11 @@
   @extend .error;
  }
 
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 

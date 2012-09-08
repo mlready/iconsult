@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120907030728) do
+ActiveRecord::Schema.define(:version => 20120908022639) do
 
   create_table "agencies", :force => true do |t|
     t.string   "name"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120907030728) do
     t.string   "remember_token"
   end
 
+  add_index "consultants", ["email"], :name => "index_consultants_on_email", :unique => true
   add_index "consultants", ["remember_token"], :name => "index_consultants_on_remember_token"
 
   create_table "contracts", :force => true do |t|
